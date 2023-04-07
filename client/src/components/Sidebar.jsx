@@ -193,7 +193,40 @@ const Sidebar = ({
             </List>
           </Box>
 
-          
+          <Box position="absolute" bottom="1rem" width="250px">
+            <Divider />
+            <FlexBetween textTransform="none" gap="0.5rem" m="1.5rem 2re 0 3rem" >
+              <Box 
+                component="img"
+                alt="profile"
+                src={profileImage}
+                height="40px"
+                width="40px"
+                borderRadius="50%"
+                sx={{ objectFit: "cover" }}
+                ml="15px"
+              />
+                <Box textAlign="left">
+                  <Typography 
+                    fontWeight="bold" 
+                    fontSize="0.9rem"
+                    sx={{ color: theme.palette.secondary[100]}}
+                  >
+                    {user.name}
+                  </Typography>
+                  <Typography 
+                    fontSize="0.8rem"
+                    sx={{ color: theme.palette.secondary[200]}}
+                  >
+                    {user.occupation}
+                  </Typography>
+                </Box>
+                <SettingsOutlined
+                  sx={{ color: theme.palette.secondary[300], fontSize: "25px", mr: "15px"}}
+                />
+            </FlexBetween>
+            
+          </Box>
         </Drawer>
       )}
     </Box>
